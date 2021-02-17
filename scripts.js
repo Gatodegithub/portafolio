@@ -1,7 +1,7 @@
 "use strict";
 // https://github.com/mattboldt/typed.js/
 var typed2 = new Typed("#logo", {
-  strings: ["<i>Aldo</i>^700 <strong>Saavedra</strong>"],
+  strings: ["<i>Aldo</i>^700 <i>Saavedra</i>"],
   typeSpeed: 100,
   backSpeed: 100,
   loop: true,

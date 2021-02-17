@@ -17,6 +17,37 @@
   background-color: var(--hover);
 }
 
+/* Diseño titulos iguales */
+.about h2::before,
+.resume h2::before,
+.portfolio h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.about h2::after,
+.resume h2::after,
+.portfolio h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--decoration);
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.resume-title {
+  color: var(--decoration);
+}
+
 /* Side Navbar */
 .side-navbar {
   position: absolute;
@@ -129,30 +160,6 @@
   content: "";
 }
 
-.about h2::before,
-.resume h2::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 120px;
-  height: 1px;
-  background: #ddd;
-  bottom: 1px;
-  left: calc(50% - 60px);
-}
-
-.about h2::after,
-.resume h2::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: var(--decoration);
-  bottom: 0;
-  left: calc(50% - 20px);
-}
-
 .listas-datos ul {
   list-style: none;
   padding: 0;
@@ -166,3 +173,27 @@
   color: var(--decoration);
 }
 
+/* RESUME */
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -10px;
+  top: 0px;
+  background: #fff;
+  border: 2px solid #0563bb;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #0563bb;
+}
+
+@media screen and (min-width: 992px) {
+  .resume .resume-item {
+    height: 100%;
+  }
+}
