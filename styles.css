@@ -129,7 +129,8 @@
   content: "";
 }
 
-.about h2::before {
+.about h2::before,
+.resume h2::before {
   content: "";
   position: absolute;
   display: block;
@@ -140,7 +141,8 @@
   left: calc(50% - 60px);
 }
 
-.about h2::after {
+.about h2::after,
+.resume h2::after {
   content: "";
   position: absolute;
   display: block;
@@ -163,3 +165,4 @@
 .listas-datos ul i {
   color: var(--decoration);
 }
+
