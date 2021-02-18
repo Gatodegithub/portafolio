@@ -134,27 +134,26 @@
 }
 
 /* SECCION HOME */
+.hero {
+  background-color: rgba(191, 247, 220, 0.3);
+}
+
 .background-fall {
-  background: url("./developer.jpg") top no-repeat;
+  background: url("./compus.jpg") top no-repeat;
   background-size: cover;
   object-fit: cover;
 }
 
 .background-fall::before {
   content: "";
-  background: var(--hover);
+  /* background: var(--hover); */
   opacity: 0.6;
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
-}
-
-@media screen and (max-width: 768px) {
-  .list-group-horizontal {
-    justify-content: center;
-  }
+  backdrop-filter: blur(1000px);
 }
 
 .main a i{
