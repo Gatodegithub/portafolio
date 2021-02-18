@@ -149,6 +149,7 @@
   top: 0;
   left: 0;
   right: 0;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 768px) {
