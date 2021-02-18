@@ -14,3 +14,30 @@ d.addEventListener("DOMContentLoaded", () => {
     d.querySelector("nav").classList.toggle("active");
   });
 });
+
+// EMAIL JS
+const btn = document.getElementById("button");
+const form = document.getElementById("form");
+const alerta = document.getElementById("alerta");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  btn.value = "Sending...";
+
+  const serviceID = "default_service";
+  const templateID = "template_dk4c6sw";
+
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      btn.value = "Send Email";
+      alerta.classList.add("show");
+    },
+    (err) => {
+      btn.value = "Send Email";
+      alert(JSON.stringify(err));
+    }
+  );
+
+  form.reset();
+});

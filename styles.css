@@ -20,7 +20,8 @@
 /* Diseño titulos iguales */
 .about h2::before,
 .resume h2::before,
-.portfolio h2::before {
+.portfolio h2::before,
+.contact h2::before {
   content: "";
   position: absolute;
   display: block;
@@ -33,7 +34,8 @@
 
 .about h2::after,
 .resume h2::after,
-.portfolio h2::after {
+.portfolio h2::after,
+.contact h2::after {
   content: "";
   position: absolute;
   display: block;
@@ -155,6 +157,10 @@
   }
 }
 
+.main a i{
+  color: black;
+}
+
 /* SECCION ABOUT */
 .blockquote-footer::before {
   content: "";
@@ -196,4 +202,21 @@
   .resume .resume-item {
     height: 100%;
   }
+}
+
+/* CONTACTO */
+/* emailjs */
+input[type="submit"] {
+  display: block;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #4460AA;  
+  color: #fff;
+  border: none
+}
+
+
+/* FOOTER */
+.footer ul li a{
+  color: black;
 }
