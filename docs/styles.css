@@ -1,0 +1,222 @@
+:root {
+  --hover: #bff7dc;
+  --decoration: #3fe896;
+}
+
+/* Utilidades */
+.z-index-10 {
+  z-index: 10;
+}
+.z-index-20 {
+  z-index: 20;
+}
+
+/* ITEMS CON HOVER */
+.list-group-item:hover {
+  cursor: pointer;
+  background-color: var(--hover);
+}
+
+/* Diseño titulos iguales */
+.about h2::before,
+.resume h2::before,
+.portfolio h2::before,
+.contact h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.about h2::after,
+.resume h2::after,
+.portfolio h2::after,
+.contact h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--decoration);
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.resume-title {
+  color: var(--decoration);
+}
+
+/* Side Navbar */
+.side-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 100px;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  box-sizing: border-box;
+}
+.side-navbar .logo,
+.side-navbar nav ul li a {
+  /* Doy altura al li tmb */
+  line-height: 75px;
+}
+.side-navbar .logo {
+  color: #fff;
+  font-size: 24px;
+  float: left;
+  font-weight: bold;
+}
+.side-navbar nav {
+  float: right;
+}
+.side-navbar nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.side-navbar nav ul li {
+  list-style: none;
+}
+.side-navbar nav ul li a {
+  padding: 0 40px;
+  color: #fff;
+  text-decoration: none;
+  display: block; /* El a cubra todo el espacio del li */
+}
+.side-navbar nav ul li a:hover,
+.side-navbar nav ul li a.active {
+  /*El que tenga la clase active*/
+  color: #fff;
+  background-color: #0101;
+}
+.menu-toggle {
+  color: #fff;
+  float: right;
+  line-height: 40px;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 1040px) {
+  .side-navbar {
+    padding: 0 20px;
+  }
+  .menu-toggle {
+    display: block;
+    line-height: 65px;
+  }
+  .side-navbar nav {
+    position: absolute;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 75px;
+    left: -100%;
+    transition: 0.5s;
+  }
+  /* Cuando el nav tenga la clase active */
+  .side-navbar nav.active {
+    left: 0;
+    height: max-content;
+  }
+  .side-navbar nav ul {
+    display: block;
+    text-align: center;
+  }
+  .side-navbar nav ul li a {
+    line-height: 80px; /* Doy altura al li tmb */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* SECCION HOME */
+.background-fall {
+  background: url("./developer.jpg") top no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.background-fall::before {
+  content: "";
+  background: var(--hover);
+  opacity: 0.6;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .list-group-horizontal {
+    justify-content: center;
+  }
+}
+
+.main a i{
+  color: black;
+}
+
+/* SECCION ABOUT */
+.blockquote-footer::before {
+  content: "";
+}
+
+.listas-datos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.listas-datos ul li {
+  padding-bottom: 10px;
+}
+
+.listas-datos ul i {
+  color: var(--decoration);
+}
+
+/* RESUME */
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -10px;
+  top: 0px;
+  background: #fff;
+  border: 2px solid #0563bb;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #0563bb;
+}
+
+@media screen and (min-width: 992px) {
+  .resume .resume-item {
+    height: 100%;
+  }
+}
+
+/* CONTACTO */
+/* emailjs */
+input[type="submit"] {
+  display: block;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #4460AA;  
+  color: #fff;
+  border: none
+}
+
+
+/* FOOTER */
+.footer ul li a{
+  color: black;
+}
