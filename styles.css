@@ -3,8 +3,6 @@
   --decoration: #3fe896;
 }
 
-body {overflow:hidden;}
-
 /* Utilidades */
 .z-index-10 {
   z-index: 10;
